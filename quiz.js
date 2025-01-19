@@ -17,7 +17,9 @@ function checkAnswer() {
         } else {
             feedbackElement.textContent = "That's incorrect. Try again!";
         }
-    } 
+    } else {
+        feedbackElement.textContent = "Please select an answer before submitting.";
+    }
 }
 
 // Add an event listener to the "Submit Answer" button
