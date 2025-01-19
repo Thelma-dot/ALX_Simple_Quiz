@@ -10,9 +10,11 @@ function checkAnswer() {
     const feedbackElement = document.getElementById("feedback");
 
     // Check if an answer was selected
-    if (userAnswer) {
+    if (userAnswerElement) {
+        const userAnswer = userAnswerElement.value; // Extract the value of the selected radio button
+
         // Compare the user's answer with the correct answer
-        if (userAnswer.value === correctAnswer) {
+        if (userAnswer === correctAnswer) {
             feedbackElement.textContent = "Correct! Well done.";
         } else {
             feedbackElement.textContent = "That's incorrect. Try again!";
